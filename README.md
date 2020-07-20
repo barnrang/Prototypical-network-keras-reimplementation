@@ -3,22 +3,35 @@ Blog post: https://medium.com/@barnrang/re-implementation-of-the-prototypical-ne
 
 This repository is a reimplementation of the paper "Prototypical Networks for Few-shot Learning"
 
-### Citing this data set
-Please cite the following paper:
+### Requirement
+Please install the following dependency
+```
+numpy
+skimage
+tensorflow >= 2.0.0
+```
 
 
-[Lake, B. M., Salakhutdinov, R., and Tenenbaum, J. B. (2015). Human-level concept learning through probabilistic program induction.](http://www.sciencemag.org/content/350/6266/1332.short) _Science_, 350(6266), 1332-1338.
+### Make dataset
+Assume that you redirect to the root of the project, run the following command to build the omniglot dataset
+```
+$> cd python
+$> unzip images_background.zip; unzip images_evaluation.zip; mv images_evaluation/* images_background/
+$> python dataloader.py
+```
+Note that we split (1200 * 4(rotate 4 direction)) classes for training and the rest for the test set. The dataset will be collected into a numpy file `.npy`
 
+After the dataset was created, please redirect back to the root and train the model by the following command
 
-We are grateful for the [Omniglot](http://www.omniglot.com/) encyclopedia of writing systems for helping to make this data set possible, and for [Jason Gross](https://people.csail.mit.edu/jgross/) who was essential to the development and collection of this data set.
+```
+$> cd .. #(back to root)
+$> python proto_train.py
+```
 
-
-### CONTENTS
-The Omniglot data set contains 50 alphabets total. We generally split these into a background set of 30 alphabets and an evaluation set of 20 alphabets.  
-
-To compare with the results in our paper, only the background set should be used to learn general knowledge about characters (e.g., hyperparameter inference or feature learning). One-shot learning results are reported using alphabets from the evaluation set.
-
-A more challenging representation learning task uses the smaller background sets "background small 1" and "background small 2". Each of these contains just 5 alphabets, more similar to the experience that a human adult might have in learning about characters in general.  Our paper reports a large set of results on the 30 background alphabets, as well as results for several models on these smaller, more challenging background sets.
+Possible arguments are
+```
+python proto_train.py --train_way 60 --train_query 5 --val_way 20 --shot 1 --gpu 0[for specify the gpu]
+```
 
 ### Reference
-[1] Jake Snell and Kevin Swersky and Richard S. Zemel (2017). Prototypical Networks for Few-shot LearningCoRR, abs/1703.05175.
+[1] Jake Snell and Kevin Swersky and Richard S. Zemel (2017). Prototypical Networks for Few-shot LearningCoRR, abs/1703.05175. https://arxiv.org/abs/1703.05175
