@@ -1,8 +1,7 @@
-# Omniglot data set for one-shot learning
+# Reimplementation of Prototypical Network using Keras (TF 2.0)
+Blog post: https://medium.com/@barnrang/re-implementation-of-the-prototypical-network-for-few-shot-learning-using-tensorflow-2-0-keras-b2adac8e49e0
 
-This dataset contains 1623 different handwritten characters from 50 different alphabets.   
-Each of the 1623 characters was drawn online via Amazon's Mechanical Turk by 20 different people.   
-Each image is paired with stroke data, a sequences of [x,y,t] coordinates with time (t) in milliseconds. Stroke data is available in MATLAB files only.
+This repository is a reimplementation of the paper "Prototypical Networks for Few-shot Learning"
 
 ### Citing this data set
 Please cite the following paper:
@@ -21,29 +20,5 @@ To compare with the results in our paper, only the background set should be used
 
 A more challenging representation learning task uses the smaller background sets "background small 1" and "background small 2". Each of these contains just 5 alphabets, more similar to the experience that a human adult might have in learning about characters in general.  Our paper reports a large set of results on the 30 background alphabets, as well as results for several models on these smaller, more challenging background sets.
 
-
-### MATLAB
-
-Learn about the structure of the data set by running the script 'demo.m'.   
-
-Key data files (images and strokes):   
-data_background.mat   
-data_evaluation.mat   
-data_background_small1.mat   
-data_background_small2.mat   
-
-To compare with the one-shot classification results in our paper, run 'demo_classification.m' in the 'one-shot-classification' folder to demo a baseline model using Modified Hausdorff Distance.
-
-
-### PYTHON
-
-Python 2.7.*   
-Requires scipy and numpy   
-
-Key data files (images only):   
-images_background.zip   
-images_evaluation.zip   
-images_background_small1.zip   
-images_background_small2.zip   
-
-To compare with the one-shot classification results in our paper, enter the 'one-shot-classification' directory and unzip 'all_runs.zip' and place all the folders 'run01',...,'run20' in the current directory. Run 'demo_classification.py' to demo a baseline model using Modified Hausdorff Distance.
+### Reference
+[1] Jake Snell and Kevin Swersky and Richard S. Zemel (2017). Prototypical Networks for Few-shot LearningCoRR, abs/1703.05175.
