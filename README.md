@@ -15,17 +15,17 @@ tensorflow >= 2.0.0
 ### Make dataset
 Assume that you redirect to the root of the project, run the following command to build the omniglot dataset
 ```
-$> cd python
-$> unzip images_background.zip; unzip images_evaluation.zip; mv images_evaluation/* images_background/
-$> python dataloader.py
+cd python
+unzip images_background.zip; unzip images_evaluation.zip; mv images_evaluation/* images_background/
+python dataloader.py
 ```
 Note that we split (1200 * 4(rotate 4 direction)) classes for training and the rest for the test set. The dataset will be collected into a numpy file `.npy`
 
 After the dataset was created, please redirect back to the root and train the model by the following command
 
 ```
-$> cd .. #(back to root)
-$> python proto_train.py
+cd .. #(back to root)
+python proto_train.py
 ```
 
 Possible arguments are
