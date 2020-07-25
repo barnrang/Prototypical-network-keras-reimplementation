@@ -19,7 +19,23 @@ cd python
 unzip images_background.zip; unzip images_evaluation.zip; mv images_evaluation/* images_background/
 python dataloader.py
 ```
+Or run
+```
+./make_omniglot.sh
+```
+
 Note that we split (1200 * 4(rotate 4 direction)) classes for training and the rest for the test set. The dataset will be collected into a numpy file `.npy`
+
+For miniimagenet
+```
+cd python
+unzip images.zip
+```
+Or run
+
+```
+./make_miniimagenet.sh
+```
 
 After the dataset was created, please redirect back to the root and train the model by the following command
 
