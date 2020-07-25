@@ -1,0 +1,72 @@
+2020-07-25 14:59:22.182930: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-07-25 14:59:22.187559: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:05:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.6705GHz coreCount: 28 deviceMemorySize: 10.92GiB deviceMemoryBandwidth: 451.17GiB/s
+2020-07-25 14:59:22.187705: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-25 14:59:22.188845: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-25 14:59:22.189936: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-25 14:59:22.190124: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-25 14:59:22.191296: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-25 14:59:22.191956: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-25 14:59:22.194530: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-25 14:59:22.196110: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2020-07-25 14:59:22.196357: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-07-25 14:59:22.202042: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3597865000 Hz
+2020-07-25 14:59:22.202234: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55b67c4852f0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-07-25 14:59:22.202250: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-07-25 14:59:22.337062: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55b67c4a0c60 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-07-25 14:59:22.337096: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2020-07-25 14:59:22.337625: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:05:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.6705GHz coreCount: 28 deviceMemorySize: 10.92GiB deviceMemoryBandwidth: 451.17GiB/s
+2020-07-25 14:59:22.337682: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-25 14:59:22.337707: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-25 14:59:22.337729: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-25 14:59:22.337750: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-25 14:59:22.337772: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-25 14:59:22.337793: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-25 14:59:22.337815: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-25 14:59:22.338545: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2020-07-25 14:59:22.338594: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-25 14:59:22.340030: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-07-25 14:59:22.340055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 
+2020-07-25 14:59:22.340064: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N 
+2020-07-25 14:59:22.340874: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 177 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:05:00.0, compute capability: 6.1)
+Using TensorFlow backend.
+WARNING: Logging before flag parsing goes to stderr.
+W0725 14:59:23.369869 140616995538688 load.py:128] No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+2020-07-25 14:59:24.357219: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-25 14:59:24.490579: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-25 14:59:24.857504: E tensorflow/stream_executor/cuda/cuda_dnn.cc:329] Could not create cudnn handle: CUDNN_STATUS_INTERNAL_ERROR
+2020-07-25 14:59:24.863271: E tensorflow/stream_executor/cuda/cuda_dnn.cc:329] Could not create cudnn handle: CUDNN_STATUS_INTERNAL_ERROR
+2020-07-25 14:59:24.868271: E tensorflow/stream_executor/cuda/cuda_dnn.cc:329] Could not create cudnn handle: CUDNN_STATUS_INTERNAL_ERROR
+2020-07-25 14:59:24.872630: E tensorflow/stream_executor/cuda/cuda_dnn.cc:329] Could not create cudnn handle: CUDNN_STATUS_INTERNAL_ERROR
+Traceback (most recent call last):
+  File "mini_proto_test.py", line 76, in <module>
+    combine.evaluate(test_loader)
+  File "/home/hpc/anaconda3/envs/deeplr/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 66, in _method_wrapper
+    return method(self, *args, **kwargs)
+  File "/home/hpc/anaconda3/envs/deeplr/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1084, in evaluate
+    tmp_logs = test_function(iterator)
+  File "/home/hpc/anaconda3/envs/deeplr/lib/python3.6/site-packages/tensorflow/python/eager/def_function.py", line 580, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/hpc/anaconda3/envs/deeplr/lib/python3.6/site-packages/tensorflow/python/eager/def_function.py", line 644, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "/home/hpc/anaconda3/envs/deeplr/lib/python3.6/site-packages/tensorflow/python/eager/function.py", line 2420, in __call__
+    return graph_function._filtered_call(args, kwargs)  # pylint: disable=protected-access
+  File "/home/hpc/anaconda3/envs/deeplr/lib/python3.6/site-packages/tensorflow/python/eager/function.py", line 1665, in _filtered_call
+    self.captured_inputs)
+  File "/home/hpc/anaconda3/envs/deeplr/lib/python3.6/site-packages/tensorflow/python/eager/function.py", line 1746, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "/home/hpc/anaconda3/envs/deeplr/lib/python3.6/site-packages/tensorflow/python/eager/function.py", line 598, in call
+    ctx=ctx)
+  File "/home/hpc/anaconda3/envs/deeplr/lib/python3.6/site-packages/tensorflow/python/eager/execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.UnknownError:  Failed to get convolution algorithm. This is probably because cuDNN failed to initialize, so try looking to see if a warning log message was printed above.
+	 [[node model/time_distributed/sequential/conv2d/Conv2D (defined at mini_proto_test.py:76) ]] [Op:__inference_test_function_4992]
+
+Function call stack:
+test_function
+
+2020-07-25 14:59:24.976834: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+	 [[{{node PyFunc}}]]
