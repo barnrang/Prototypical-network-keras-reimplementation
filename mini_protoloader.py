@@ -43,7 +43,7 @@ class DataGenerator(tensorflow.keras.utils.Sequence):
         if data_type == 'train':
             self.class_data = np.load('python/mini_train.npy')
         elif data_type == 'val':
-            self.class_data = np.load('python/mini_eval.npy')
+            self.class_data = np.load('python/mini_val.npy')
         else:
             self.class_data = np.load('python/mini_test.npy')
 

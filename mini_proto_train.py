@@ -70,9 +70,9 @@ if __name__ == "__main__":
     combine = Model([sample, inp], pred)
 
     optimizer = Adam(0.001)
-    combine.compile(loss='categorical_crossentropy', optimizer=optimizer, 
+    combine.compile(loss='categorical_crossentropy', optimizer=optimizer,
         metrics=['categorical_accuracy'])
-    
+
     train_loader = DataGenerator(way=train_way, query=train_query, shot=shot, num_batch=1000)
     val_loader = DataGenerator(data_type='val',way=val_way, shot=shot)
     test_loader = DataGenerator(data_type='test',way=val_way, shot=shot, num_batch=1000)
@@ -83,12 +83,13 @@ if __name__ == "__main__":
     tensorboard = cb.TensorBoard()
 
 
-    combine.fit_generator(train_loader,epochs=50,validation_data=val_loader,  
-        use_multiprocessing=True, workers=4, shuffle=False, 
+    combine.fit_generator(train_loader,epochs=50,validation_data=val_loader,
+        use_multiprocessing=True, workers=4, shuffle=False,
         callbacks=[save_conv, lr_sched, tensorboard])
     combine.evaluate(test_loader)
 
     save_model(conv, "model/miniimage_conv_{epoch}_{shot}_{val_way}")
+    combine.evaluate(test_loader)
 
 
 # images, labels = zip(*list(loader('python/images_background')))
